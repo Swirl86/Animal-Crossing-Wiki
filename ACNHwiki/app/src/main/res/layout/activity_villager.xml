@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp"
+    android:background="@color/lightGreen">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/villager_detail_card"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:strokeWidth="10dp"
+        app:strokeColor="@color/darkSand"
+        app:cardElevation="0dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <FrameLayout
+                android:id="@+id/relativelayout_chat_bubble"
+                app:layout_constraintStart_toStartOf="@+id/villager_detail_image"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp">
+
+            <ImageView
+                android:id="@+id/chat_bubble"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/chat_bubble"
+                android:contentDescription="@string/saying" />
+
+                <TextView
+                    android:id="@+id/chat_bubble_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal|center"
+                    android:layout_marginBottom="5dp"
+                    android:text="@string/saying"
+                    android:textColor="#000000"
+                    android:textSize="16sp"
+                    android:textAppearance="?android:attr/textAppearanceSmall" />
+            </FrameLayout>
+
+            <ImageView
+                android:id="@+id/villager_detail_image"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_centerInParent="true"
+                android:adjustViewBounds="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/relativelayout_chat_bubble"
+                app:srcCompat="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/villager_detail_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@string/villager_name"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_image" />
+
+            <TextView
+                android:id="@+id/villager_detail_personality_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/personality"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/villager_detail_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_name" />
+
+            <TextView
+                android:id="@+id/villager_detail_personality"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/personality"
+                app:layout_constraintEnd_toEndOf="@+id/villager_detail_personality_title"
+                app:layout_constraintStart_toStartOf="@+id/villager_detail_personality_title"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_personality_title" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="191dp" />
+
+            <TextView
+                android:id="@+id/villager_detail_birthdaystr_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:text="@string/birthday"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_name" />
+
+            <TextView
+                android:id="@+id/villager_detail_birthdaystr"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/birthday"
+                app:layout_constraintEnd_toEndOf="@+id/villager_detail_birthdaystr_title"
+                app:layout_constraintStart_toStartOf="@+id/villager_detail_birthdaystr_title"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_birthdaystr_title" />
+
+            <TextView
+                android:id="@+id/villager_detail_gender_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="@string/gender"
+                app:layout_constraintEnd_toEndOf="@+id/villager_detail_personality_title"
+                app:layout_constraintStart_toStartOf="@+id/villager_detail_personality_title"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_personality" />
+
+            <TextView
+                android:id="@+id/villager_detail_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/gender"
+                app:layout_constraintEnd_toEndOf="@+id/villager_detail_gender_title"
+                app:layout_constraintStart_toStartOf="@+id/villager_detail_gender_title"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_gender_title" />
+
+            <TextView
+                android:id="@+id/villager_detail_species_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="@string/species"
+                app:layout_constraintEnd_toEndOf="@+id/villager_detail_birthdaystr_title"
+                app:layout_constraintStart_toStartOf="@+id/villager_detail_birthdaystr_title"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_birthdaystr" />
+
+            <TextView
+                android:id="@+id/villager_detail_species"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/species"
+                app:layout_constraintEnd_toEndOf="@+id/villager_detail_species_title"
+                app:layout_constraintStart_toStartOf="@+id/villager_detail_species_title"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_species_title" />
+
+            <TextView
+                android:id="@+id/villager_detail_hobby_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="@string/hobby"
+                app:layout_constraintEnd_toEndOf="@+id/villager_detail_personality_title"
+                app:layout_constraintStart_toStartOf="@+id/villager_detail_personality_title"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_gender" />
+
+            <TextView
+                android:id="@+id/villager_detail_hobby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/hobby"
+                app:layout_constraintEnd_toEndOf="@+id/villager_detail_hobby_title"
+                app:layout_constraintStart_toStartOf="@+id/villager_detail_hobby_title"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_hobby_title" />
+
+            <TextView
+                android:id="@+id/villager_detail_catchPhrase_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="@string/catch_phrase"
+                app:layout_constraintEnd_toEndOf="@+id/villager_detail_birthdaystr_title"
+                app:layout_constraintStart_toStartOf="@+id/villager_detail_birthdaystr_title"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_species" />
+
+            <TextView
+                android:id="@+id/villager_detail_catchPhrase"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/catch_phrase"
+                app:layout_constraintEnd_toEndOf="@+id/villager_detail_catchPhrase_title"
+                app:layout_constraintStart_toStartOf="@+id/villager_detail_catchPhrase_title"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_catchPhrase_title" />
+
+            <TextView
+                android:id="@+id/villager_detail_saying_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:text="@string/saying"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_catchPhrase" />
+
+            <TextView
+                android:id="@+id/villager_detail_saying"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:breakStrategy="simple"
+                android:text="@string/saying"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_saying_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Animal Crossing Wiki</string>
+    <string name="villager_image">Villager Image</string>
+    <string name="species">Species</string>
+    <string name="personality">Personality</string>
+    <string name="saying">Saying</string>
+    <string name="villager_name">name</string>
+    <string name="gender">Gender</string>
+    <string name="birthday">Birthday</string>
+    <string name="hobby">Hobby</string>
+    <string name="catch_phrase">Catch-phrase</string>
+    <string name="id">id</string>
+</resources>
