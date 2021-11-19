@@ -10,4 +10,6 @@
     <string name="hobby">Hobby</string>
     <string name="catch_phrase">Catch-phrase</string>
     <string name="id">id</string>
+    <string name="nook_phone"><u>Nook Phone</u></string>
+    <string name="search_by_name">Search By Name</string>
 </resources>

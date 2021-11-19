@@ -59,7 +59,8 @@ public class VillagerActivity extends AppCompatActivity {
 
         chatBubble.setText(villager.getCatchPhrase());
 
-        saying.setText(villager.getSaying());
+        String sayingQuotes = "\"" + villager.getSaying() + "\"";
+        saying.setText(sayingQuotes);
         saying.setTextColor(textColor);
 
 
@@ -93,12 +94,11 @@ public class VillagerActivity extends AppCompatActivity {
         catchPhrase = findViewById(R.id.villager_detail_catchPhrase);
         saying = findViewById(R.id.villager_detail_saying);
         chatBubble = findViewById(R.id.chat_bubble_text);
-
     }
 
     @ColorInt
     int darkenColor(@ColorInt int color) {
-        float ratio = 1.0f - 0.2f;
+        float ratio = 1.0f;
         int a = (color >> 24) & 0xFF;
         int r = (int) (((color >> 16) & 0xFF) * ratio);
         int g = (int) (((color >> 8) & 0xFF) * ratio);

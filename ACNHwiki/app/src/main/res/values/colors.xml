@@ -16,5 +16,7 @@
     <color name="darkSand">#ecdab3</color>
     <color name="lightSand">#e4e2c7</color>  <!-- faf5ec -->
     <color name="lightBlue">#99d6db</color>
+    <color name="iconBackground">#e6bf46</color>
+    <color name="burlywood">#f6bf77</color>
 
 </resources>

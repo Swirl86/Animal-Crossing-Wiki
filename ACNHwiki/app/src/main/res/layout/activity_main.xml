@@ -1,20 +1,168 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/lightGreen"
+    android:padding="15dp"
+    android:fillViewport="true"
     tools:context=".MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerview"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/villager_detail_card"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="@color/lightSand"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardUseCompatPadding="true"
+        app:strokeColor="@color/burlywood"
+        app:strokeWidth="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/home_view_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/nook_phone"
+                android:textColor="@color/darkGreen"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageButton
+                android:id="@+id/go_to_villager_list"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/round_icon"
+                android:contentDescription="Villager button"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/villager_icon"
+                app:layout_constraintStart_toStartOf="@+id/home_view_title"
+                app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+            <ImageButton
+                android:id="@+id/go_to_critterpedia_list"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:background="@drawable/round_icon"
+                android:contentDescription="Critterpedia button"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/critterpedia_icon"
+                app:layout_constraintEnd_toEndOf="@+id/home_view_title"
+                app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+            <ImageButton
+                android:id="@+id/go_to_diy_list"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_icon"
+                android:contentDescription="DIY Recipes button"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/diy_recipes_icon"
+                app:layout_constraintStart_toStartOf="@+id/go_to_villager_list"
+                app:layout_constraintTop_toBottomOf="@+id/go_to_villager_list" />
+
+            <ImageButton
+                android:id="@+id/go_to_art_list"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_icon"
+                android:contentDescription="Redd Art button"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/redd_icon"
+                app:layout_constraintStart_toStartOf="@+id/go_to_critterpedia_list"
+                app:layout_constraintTop_toBottomOf="@+id/go_to_critterpedia_list" />
+
+            <ImageButton
+                android:id="@+id/go_to_fossil_list"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_icon"
+                android:contentDescription="Fossil button"
+                android:padding="5dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/fossil_icon"
+                app:layout_constraintStart_toStartOf="@+id/go_to_diy_list"
+                app:layout_constraintTop_toBottomOf="@+id/go_to_diy_list" />
+
+            <ImageButton
+                android:id="@+id/go_to_kk_slider_list"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/round_icon"
+                android:contentDescription="K.K Slider music button"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/kk_slider_icon"
+                app:layout_constraintStart_toStartOf="@+id/go_to_art_list"
+                app:layout_constraintTop_toBottomOf="@+id/go_to_art_list" />
+
+            <ImageButton
+                android:id="@+id/go_to_item_list"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/round_icon"
+                android:contentDescription="Item list button"
+                android:padding="10dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/item_icon"
+                app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/go_to_fossil_list"
+                app:layout_constraintTop_toBottomOf="@+id/go_to_fossil_list" />
+
+            <ImageButton
+                android:id="@+id/go_to_clothing_list"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="22dp"
+                android:background="@drawable/round_icon"
+                android:contentDescription="Clothing list button"
+                android:padding="3dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/clothing_icon"
+                app:layout_constraintBottom_toTopOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/go_to_kk_slider_list"
+                app:layout_constraintTop_toBottomOf="@+id/go_to_kk_slider_list" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="110dp" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_begin="498dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</ScrollView>
