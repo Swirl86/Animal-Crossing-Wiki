@@ -70,7 +70,7 @@ public class VillagerAdapter extends RecyclerView.Adapter<VillagerAdapter.Villag
             } else {
                 String filterPattern = constraint.toString().toLowerCase().trim();
                 for (VillagerEntity villager: villagerFilterList ) {
-                    if(villager.getName().getNameEUen().toLowerCase().contains(filterPattern)) {
+                    if(isContains(filterPattern, villager)) {
                         filteredList.add(villager);
                     }
                 }
@@ -91,6 +91,13 @@ public class VillagerAdapter extends RecyclerView.Adapter<VillagerAdapter.Villag
         }
     };
 
+    private boolean isContains(String filterPattern, VillagerEntity villager) {
+        return villager.getName().getNameEUen().toLowerCase().contains(filterPattern) ||
+                villager.getSpecies().toLowerCase().contains(filterPattern) ||
+                villager.getGender().toLowerCase().equals(filterPattern) ||
+                villager.getPersonality().toLowerCase().equals(filterPattern);
+    }
+
 
     // For villager detail view
     public interface RecyclerViewClickListener {
@@ -98,7 +105,7 @@ public class VillagerAdapter extends RecyclerView.Adapter<VillagerAdapter.Villag
     }
 
 
-    public class VillagerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class VillagerViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView name , species , personality , saying;
         ImageView img;
 

@@ -1,4 +1,4 @@
-package com.example.acnh_wiki.villager;
+package com.example.acnh_wiki.art;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -19,6 +19,10 @@ import android.widget.Toast;
 import com.example.acnh_wiki.ApiInterface;
 import com.example.acnh_wiki.R;
 import com.example.acnh_wiki.RetrofitInstance;
+import com.example.acnh_wiki.villager.MainVillagerActivity;
+import com.example.acnh_wiki.villager.VillagerActivity;
+import com.example.acnh_wiki.villager.VillagerAdapter;
+import com.example.acnh_wiki.villager.VillagerEntity;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.List;
@@ -27,13 +31,13 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class MainVillagerActivity extends AppCompatActivity {
+public class MainArtActivity extends AppCompatActivity {
     private ApiInterface apiInterface;
     private RecyclerView recyclerView;
-    private List<VillagerEntity> villagerList;
+    private List<ArtEntity> artList;
 
-    private VillagerAdapter adapter;
-    private VillagerAdapter.RecyclerViewClickListener listener;
+    private ArtAdapter adapter;
+    private ArtAdapter.RecyclerViewClickListener listener;
 
     private ProgressBar progressBar;
     private FloatingActionButton scrollUp;
@@ -41,28 +45,27 @@ public class MainVillagerActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_villager);
-
+        setContentView(R.layout.activity_main_art);
 
         init();
 
-        apiInterface.getVillagers().enqueue(new Callback<List<VillagerEntity>>() {
+        apiInterface.getArts().enqueue(new Callback<List<ArtEntity>>() {
             @Override
-            public void onResponse(Call<List<VillagerEntity>> call, Response<List<VillagerEntity>> response) {
+            public void onResponse(Call<List<ArtEntity>> call, Response<List<ArtEntity>> response) {
 
                 if(!response.isSuccessful()) {
-                    Toast.makeText(MainVillagerActivity.this, response.code(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainArtActivity.this, response.code(), Toast.LENGTH_LONG).show();
                 }
 
-                villagerList = response.body();
-                adapter = new VillagerAdapter(villagerList, MainVillagerActivity.this, listener);
+                artList = response.body();
+                adapter = new ArtAdapter(artList, MainArtActivity.this, listener);
                 recyclerView.setAdapter(adapter);
                 progressBar.setVisibility(View.GONE);
             }
 
             @Override
-            public void onFailure(Call<List<VillagerEntity>> call, Throwable t) {
-                Toast.makeText(MainVillagerActivity.this, t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
+            public void onFailure(Call<List<ArtEntity>> call, Throwable t) {
+                Toast.makeText(MainArtActivity.this, t.getLocalizedMessage(), Toast.LENGTH_LONG).show();
             }
         });
 
@@ -88,28 +91,28 @@ public class MainVillagerActivity extends AppCompatActivity {
                 scrollUp.setVisibility(View.GONE);
             }
         });
-}
+    }
 
     private void init() {
         setOnClickListener();
-        recyclerView = findViewById(R.id.villager_recyclerview);
+        recyclerView = findViewById(R.id.art_recyclerview);
         recyclerView.setHasFixedSize(true);
-        recyclerView.setLayoutManager(new LinearLayoutManager(MainVillagerActivity.this));
+        recyclerView.setLayoutManager(new LinearLayoutManager(MainArtActivity.this));
 
         apiInterface = RetrofitInstance.getRetrofit().create(ApiInterface.class);
 
-        progressBar = findViewById(R.id.progress_bar_villager);
+        progressBar = findViewById(R.id.progress_bar_art);
 
-        scrollUp = findViewById(R.id.scroll_Up_villager);
+        scrollUp = findViewById(R.id.scroll_Up_art);
         scrollUp.setVisibility(View.GONE);
     }
 
     private void setOnClickListener() {
-        listener = new VillagerAdapter.RecyclerViewClickListener() {
+        listener = new ArtAdapter.RecyclerViewClickListener() {
             @Override
             public void onClick(View v, int position) {
-                Intent intent = new Intent(getApplicationContext(), VillagerActivity.class);
-                intent.putExtra("villager", villagerList.get(position));
+                Intent intent = new Intent(getApplicationContext(), ArtActivity.class);
+                intent.putExtra("art", artList.get(position));
                 startActivity(intent);
             }
         };
@@ -141,4 +144,5 @@ public class MainVillagerActivity extends AppCompatActivity {
 
         return true;
     }
+
 }

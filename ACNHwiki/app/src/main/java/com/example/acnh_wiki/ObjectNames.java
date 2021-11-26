@@ -1,10 +1,10 @@
-package com.example.acnh_wiki.villager;
+package com.example.acnh_wiki;
 
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
 
-public class VillagerNames implements Serializable {
+public class ObjectNames implements Serializable {
     @SerializedName("name-USen")
     private String nameUSen;
     @SerializedName("name-EUen")

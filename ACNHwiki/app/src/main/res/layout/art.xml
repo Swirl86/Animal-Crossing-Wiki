@@ -2,6 +2,7 @@
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@color/lightGreen">
@@ -25,7 +26,7 @@
             android:padding="2dp">
 
             <ImageView
-                android:id="@+id/villagerImage"
+                android:id="@+id/art_image"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:layout_marginTop="18dp"
@@ -36,67 +37,50 @@
                 app:srcCompat="@drawable/ic_launcher_background" />
 
             <TextView
-                android:id="@+id/species_title"
+                android:id="@+id/art_sell_price_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/species"
-                app:layout_constraintStart_toStartOf="@+id/personality_title"
-                app:layout_constraintTop_toBottomOf="@+id/personality_title" />
+                android:text="@string/sell_price"
+                app:layout_constraintStart_toStartOf="@+id/art_buy_price_title"
+                app:layout_constraintTop_toBottomOf="@+id/art_buy_price_title" />
 
             <TextView
-                android:id="@+id/villagerSpecies"
+                android:id="@+id/art_sell_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/species"
-                app:layout_constraintStart_toStartOf="@+id/villagerPersonality"
-                app:layout_constraintTop_toTopOf="@+id/species_title" />
+                android:text="@string/sell_price"
+                app:layout_constraintStart_toStartOf="@+id/art_buy_price"
+                app:layout_constraintTop_toTopOf="@+id/art_sell_price_title" />
 
             <TextView
-                android:id="@+id/personality_title"
+                android:id="@+id/art_buy_price_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:text="@string/personality"
-                app:layout_constraintStart_toStartOf="@+id/villagerName"
-                app:layout_constraintTop_toBottomOf="@+id/villagerName" />
+                android:text="@string/buy_price"
+                app:layout_constraintStart_toStartOf="@+id/art_title"
+                app:layout_constraintTop_toBottomOf="@+id/art_title" />
 
             <TextView
-                android:id="@+id/villagerPersonality"
+                android:id="@+id/art_buy_price"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
-                android:text="@string/personality"
-                app:layout_constraintStart_toEndOf="@+id/personality_title"
-                app:layout_constraintTop_toTopOf="@+id/personality_title" />
+                android:text="@string/buy_price"
+                app:layout_constraintStart_toEndOf="@+id/art_buy_price_title"
+                app:layout_constraintTop_toTopOf="@+id/art_buy_price_title" />
 
             <TextView
-                android:id="@+id/villagerSaying"
-                android:layout_width="330dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="0dp"
-                android:layout_marginBottom="8dp"
-                android:layout_marginEnd="16dp"
-                android:maxLines="3"
-                android:text="@string/saying"
-                android:textAlignment="center"
-                android:textStyle="italic"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/villagerImage"
-                app:layout_constraintTop_toBottomOf="@+id/villagerImage" />
-
-            <TextView
-                android:id="@+id/villagerName"
+                android:id="@+id/art_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/villager_name"
+                android:text="@string/art_name"
                 android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.051"
                 app:layout_constraintStart_toStartOf="@+id/guideline"
-                app:layout_constraintTop_toTopOf="@+id/villagerImage" />
+                app:layout_constraintTop_toTopOf="@+id/art_image" />
 
             <View
                 android:id="@+id/divider"
@@ -105,7 +89,7 @@
                 android:layout_marginTop="18dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/villagerSaying" />
+                app:layout_constraintTop_toBottomOf="@+id/art_image" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline"
@@ -115,6 +99,5 @@
                 app:layout_constraintGuide_begin="141dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-
     </com.google.android.material.card.MaterialCardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

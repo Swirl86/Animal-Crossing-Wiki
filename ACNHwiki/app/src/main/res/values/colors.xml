@@ -9,6 +9,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="transparent">#ffffff00</color>
+    <color name="light_lime">#f5ffe5</color>
 
     <!-- Animal Crossing colors -->
     <color name="darkGreen">#119975</color>

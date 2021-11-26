@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    tools:context=".villager.VillagerActivity">
 
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="15dp"
+    android:padding="20dp"
     android:background="@color/lightGreen">
 
     <com.google.android.material.card.MaterialCardView
@@ -76,15 +78,15 @@
                 android:text="@string/villager_name"
                 android:textSize="24sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/villager_detail_image"
+                app:layout_constraintStart_toStartOf="@+id/villager_detail_image"
                 app:layout_constraintTop_toBottomOf="@+id/villager_detail_image" />
 
             <TextView
                 android:id="@+id/villager_detail_personality_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
+                android:layout_marginStart="16dp"
                 android:layout_marginTop="16dp"
                 android:text="@string/personality"
                 android:textSize="16sp"
@@ -103,24 +105,16 @@
                 app:layout_constraintStart_toStartOf="@+id/villager_detail_personality_title"
                 app:layout_constraintTop_toBottomOf="@+id/villager_detail_personality_title" />
 
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_begin="191dp" />
-
             <TextView
                 android:id="@+id/villager_detail_birthdaystr_title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:layout_marginEnd="8dp"
                 android:text="@string/birthday"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/guideline2"
+                app:layout_constraintEnd_toEndOf="@+id/villager_detail_catchPhrase_title"
+                app:layout_constraintStart_toStartOf="@+id/villager_detail_catchPhrase_title"
                 app:layout_constraintTop_toBottomOf="@+id/villager_detail_name" />
 
             <TextView
@@ -204,11 +198,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:textStyle="bold"
-                android:textSize="16sp"
+                android:layout_marginEnd="16dp"
                 android:text="@string/catch_phrase"
-                app:layout_constraintEnd_toEndOf="@+id/villager_detail_birthdaystr_title"
-                app:layout_constraintStart_toStartOf="@+id/villager_detail_birthdaystr_title"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/villager_detail_name"
                 app:layout_constraintTop_toBottomOf="@+id/villager_detail_species" />
 
             <TextView
@@ -243,9 +238,19 @@
                 android:textAlignment="center"
                 android:maxLines="3"
                 android:text="@string/saying"
+                android:textStyle="italic"
                 app:layout_constraintEnd_toEndOf="@+id/villager_detail_saying_title"
                 app:layout_constraintStart_toStartOf="@+id/villager_detail_saying_title"
                 app:layout_constraintTop_toBottomOf="@+id/villager_detail_saying_title" />
+
+            <View
+                android:id="@+id/art_divider"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/villager_detail_saying" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </com.google.android.material.card.MaterialCardView>

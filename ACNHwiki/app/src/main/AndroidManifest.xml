@@ -12,6 +12,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ACNHwiki">
         <activity
+            android:name=".art.ArtActivity"
+            android:exported="false" />
+        <activity
+            android:name=".villager.VillagerActivity"
+            android:exported="false" />
+        <activity
+            android:name=".art.MainArtActivity"
+            android:exported="false" />
+        <activity
             android:name=".villager.MainVillagerActivity"
             android:exported="false" />
         <activity
@@ -23,7 +32,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".villager.VillagerActivity" />
     </application>
 
 </manifest>

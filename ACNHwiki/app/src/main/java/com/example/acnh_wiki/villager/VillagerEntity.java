@@ -1,6 +1,6 @@
 package com.example.acnh_wiki.villager;
 
-import com.example.acnh_wiki.villager.VillagerNames;
+import com.example.acnh_wiki.ObjectNames;
 import com.google.gson.annotations.SerializedName;
 
 import java.io.Serializable;
@@ -12,7 +12,7 @@ public class VillagerEntity implements Serializable {
     @SerializedName("file-name")
     private String fileName;
     @SerializedName("name")
-    private VillagerNames name;
+    private ObjectNames name;
     @SerializedName("personality")
     private String personality;
     @SerializedName("birthday-string")
@@ -38,7 +38,7 @@ public class VillagerEntity implements Serializable {
     @SerializedName("saying")
     private String saying;
 
-    public VillagerEntity(int id, String fileName, VillagerNames name, String personality,
+    public VillagerEntity(int id, String fileName, ObjectNames name, String personality,
                           String birthdayString, String birthday, String species, String gender,
                           String hobby, String catchPhrase, String iconUri, String imageUri,
                           String bubbleColor, String textColor, String saying) {
@@ -75,11 +75,11 @@ public class VillagerEntity implements Serializable {
         this.fileName = fileName;
     }
 
-    public VillagerNames getName() {
+    public ObjectNames getName() {
         return name;
     }
 
-    public void setName(VillagerNames name) {
+    public void setName(ObjectNames name) {
         this.name = name;
     }
 

@@ -1,7 +1,6 @@
 package com.example.acnh_wiki.villager;
 
 import android.content.Intent;
-import android.content.res.Resources;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -12,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
 import com.example.acnh_wiki.R;
-import com.example.acnh_wiki.villager.VillagerEntity;
+import com.example.acnh_wiki.Utils;
 import com.squareup.picasso.Picasso;
 
 public class VillagerActivity extends AppCompatActivity {
@@ -53,11 +52,11 @@ public class VillagerActivity extends AppCompatActivity {
 
         hobby.setText(villager.getHobby());
         hobby.setTextColor(textColor);
-
-        catchPhrase.setText(villager.getCatchPhrase());
+        String phrase = Utils.capitalizeString(villager.getCatchPhrase());
+        catchPhrase.setText(phrase);
         catchPhrase.setTextColor(textColor);
 
-        chatBubble.setText(villager.getCatchPhrase());
+        chatBubble.setText(phrase);
 
         String sayingQuotes = "\"" + villager.getSaying() + "\"";
         saying.setText(sayingQuotes);

@@ -1,15 +1,23 @@
 <resources>
     <string name="app_name">Animal Crossing Wiki</string>
     <string name="villager_image">Villager Image</string>
-    <string name="species">Species</string>
-    <string name="personality">Personality</string>
-    <string name="saying">Saying</string>
+    <string name="species">Species:</string>
+    <string name="personality">Personality:</string>
+    <string name="saying">Saying:</string>
     <string name="villager_name">name</string>
-    <string name="gender">Gender</string>
-    <string name="birthday">Birthday</string>
-    <string name="hobby">Hobby</string>
-    <string name="catch_phrase">Catch-phrase</string>
+    <string name="gender">Gender:</string>
+    <string name="birthday">Birthday:</string>
+    <string name="hobby">Hobby:</string>
+    <string name="catch_phrase">Catch-phrase:</string>
     <string name="id">id</string>
     <string name="nook_phone"><u>Nook Phone</u></string>
     <string name="search_by_name">Search By Name</string>
+    <string name="scroll_to_top">Scroll to top</string>
+    <string name="villager_search">Villager Search</string>
+    <string name="buy_price">Buy price:</string>
+    <string name="sell_price">Sell price:</string>
+    <string name="art_name">Art name</string>
+    <string name="art_sell_price">Sell Price</string>
+    <string name="art_buy_price">Buy Price</string>
+    <string name="art_description">Art Description</string>
 </resources>
