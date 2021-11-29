@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".fossils.FossilActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/lightGreen"
+        android:padding="20dp">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/fossil_detail_card"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:cardCornerRadius="15dp"
+            app:cardElevation="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/burlywood"
+            app:strokeWidth="10dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/lightSand"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/fossil_detail_image"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginTop="30dp"
+                    android:adjustViewBounds="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_launcher_background" />
+
+                <TextView
+                    android:id="@+id/fossil_detail_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="@string/fossil_name"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/fossil_detail_image"
+                    app:layout_constraintStart_toStartOf="@+id/fossil_detail_image"
+                    app:layout_constraintTop_toBottomOf="@+id/fossil_detail_image" />
+
+                <TextView
+                    android:id="@+id/fossil_detail_sell_price_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/art_sell_price"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/fossil_detail_name"
+                    app:layout_constraintStart_toStartOf="@+id/fossil_detail_image"
+                    app:layout_constraintTop_toBottomOf="@+id/fossil_detail_name" />
+
+                <TextView
+                    android:id="@+id/fossil_detail_sell_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/art_sell_price"
+                    app:layout_constraintEnd_toEndOf="@+id/fossil_detail_sell_price_title"
+                    app:layout_constraintStart_toStartOf="@+id/fossil_detail_sell_price_title"
+                    app:layout_constraintTop_toBottomOf="@+id/fossil_detail_sell_price_title" />
+
+                <TextView
+                    android:id="@+id/fossil_detail_part_of_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/fossil_part_of"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="@+id/fossil_detail_image"
+                    app:layout_constraintTop_toBottomOf="@+id/fossil_detail_name" />
+
+                <TextView
+                    android:id="@+id/fossil_detail_part_of"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/fossil_part_of"
+                    app:layout_constraintEnd_toEndOf="@+id/fossil_detail_part_of_title"
+                    app:layout_constraintStart_toStartOf="@+id/fossil_detail_part_of_title"
+                    app:layout_constraintTop_toBottomOf="@+id/fossil_detail_part_of_title" />
+
+                <TextView
+                    android:id="@+id/fossil_detail_part_of_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fossil_part_of_description"
+                    android:layout_marginTop="16dp"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fossil_detail_sell_price" />
+
+                <TextView
+                    android:id="@+id/fossil_detail_description_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/fossil_description"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.501"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fossil_detail_part_of_description" />
+
+                <TextView
+                    android:id="@+id/fossil_detail_description"
+                    android:layout_width="280dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/fossil_description"
+                    android:textAlignment="center"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    app:layout_constraintEnd_toEndOf="@+id/fossil_detail_description_title"
+                    app:layout_constraintHorizontal_bias="0.508"
+                    app:layout_constraintStart_toStartOf="@+id/fossil_detail_description_title"
+                    app:layout_constraintTop_toBottomOf="@+id/fossil_detail_description_title" />
+
+                <View
+                    android:id="@+id/fossil_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="22dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/fossil_detail_description" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

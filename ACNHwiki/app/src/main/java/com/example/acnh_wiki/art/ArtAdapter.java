@@ -15,7 +15,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.acnh_wiki.R;
 import com.example.acnh_wiki.Utils;
-import com.example.acnh_wiki.villager.VillagerEntity;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -45,12 +44,12 @@ public class ArtAdapter extends RecyclerView.Adapter<ArtAdapter.ArtViewHolder> i
     @Override
     public void onBindViewHolder(@NonNull ArtAdapter.ArtViewHolder holder, int position) {
         ArtEntity art = artList.get(position);
-        String name = Utils.capitalizeString(art.getName().getNameEUen());
-        holder.name.setText(name);
-        String price = art.getByePrice() + " \uD83D\uDCB0";
-        holder.buyPrice.setText(price);
-        price = art.getSellPrice() + " \uD83D\uDCB0";
-        holder.sellPrice.setText(price);
+        String text = Utils.capitalizeString(art.getName().getNameEUen());
+        holder.name.setText(text);
+        text = art.getByePrice() + " \uD83D\uDCB0";
+        holder.buyPrice.setText(text);
+        text = art.getSellPrice() + " \uD83D\uDCB0";
+        holder.sellPrice.setText(text);
         Picasso.with(context).load(art.getImageUri()).into(holder.img);
     }
 

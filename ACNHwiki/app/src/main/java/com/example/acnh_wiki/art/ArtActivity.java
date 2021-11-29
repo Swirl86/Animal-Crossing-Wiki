@@ -1,7 +1,6 @@
 package com.example.acnh_wiki.art;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,11 +9,10 @@ import android.widget.TextView;
 
 import com.example.acnh_wiki.R;
 import com.example.acnh_wiki.Utils;
-import com.example.acnh_wiki.villager.VillagerEntity;
 import com.squareup.picasso.Picasso;
 
 public class ArtActivity extends AppCompatActivity {
-    TextView name , sellPrice , buyPrice , fake, descriprion;
+    TextView name , sellPrice , buyPrice , fake, description;
     ImageView imageView;
 
     @Override
@@ -41,7 +39,7 @@ public class ArtActivity extends AppCompatActivity {
         fake.setText(text);
 
         text = "\"" + art.getMuseumDesc() +"\"";
-        descriprion.setText(text);
+        description.setText(text);
     }
 
     private void init() {
@@ -50,6 +48,6 @@ public class ArtActivity extends AppCompatActivity {
         sellPrice = findViewById(R.id.art_detail_sell_price);
         buyPrice = findViewById(R.id.art_detail_buy_price);
         fake = findViewById(R.id.art_detail_fake);
-        descriprion = findViewById(R.id.art_detail_description);
+        description = findViewById(R.id.art_detail_description);
     }
 }

@@ -13,11 +13,17 @@
     <string name="nook_phone"><u>Nook Phone</u></string>
     <string name="search_by_name">Search By Name</string>
     <string name="scroll_to_top">Scroll to top</string>
-    <string name="villager_search">Villager Search</string>
+    <string name="search">Search</string>
+
     <string name="buy_price">Buy price:</string>
     <string name="sell_price">Sell price:</string>
+
     <string name="art_name">Art name</string>
     <string name="art_sell_price">Sell Price</string>
     <string name="art_buy_price">Buy Price</string>
     <string name="art_description">Art Description</string>
+    <string name="fossil_part_of">Part Of</string>
+    <string name="fossil_name">Fossil Name</string>
+    <string name="fossil_description">Fossil Description</string>
+    <string name="fossil_part_of_description">Part of description</string>
 </resources>

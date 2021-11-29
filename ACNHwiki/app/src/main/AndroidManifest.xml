@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ACNHwiki">
         <activity
+            android:name=".fossils.FossilActivity"
+            android:exported="false" />
+        <activity
+            android:name=".fossils.MainFossilActivity"
+            android:exported="false" />
+        <activity
             android:name=".art.ArtActivity"
             android:exported="false" />
         <activity
