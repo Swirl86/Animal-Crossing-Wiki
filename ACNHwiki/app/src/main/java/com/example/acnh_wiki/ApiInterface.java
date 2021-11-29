@@ -2,6 +2,7 @@ package com.example.acnh_wiki;
 
 import com.example.acnh_wiki.art.ArtEntity;
 import com.example.acnh_wiki.fossils.FossilEntity;
+import com.example.acnh_wiki.song.SongEntity;
 import com.example.acnh_wiki.villager.VillagerEntity;
 
 import java.util.List;
@@ -21,6 +22,8 @@ public interface ApiInterface {
     @GET("fossils")
     Call<List<FossilEntity>> getFossils();
 
+    @GET("songs")
+    Call<List<SongEntity>> getSongs();
 
     // TODO implement
     /*@GET("fish")
@@ -28,9 +31,6 @@ public interface ApiInterface {
 
     @GET("bugs")
     Call<List<BugEntity>> getBugs();
-
-    @GET("songs")
-    Call<List<SongEntity>> getSongs();
 
     @GET("houseware")
     Call<List<HousewareEntity>> getHousewares();
